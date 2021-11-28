@@ -27,17 +27,17 @@ dirs = [
 # ВАШ КОД ТУТ
 
 def search (dirs, filename, path = ""):
-    res = []
+    res = list()
     if type(dirs) == tuple:
-        if len(path)==0:
+        if len(path) == 0:
             path += "/" + dirs[0]
         else:
             path += "//" + dirs[0]
         dirs = dirs[1]
     if type(dirs) == tuple or type(dirs) == list:
-        res.extend(functools.reduce(lambda res, dir: res + search(dir, filename, path), dirs, []))
+        res.extend(functools.reduce(lambda res, dir: res + search(dir, filename, path), dirs, list()))
     if dirs == filename:
-        res.append("{}/{}".format(path, filename))
+        res.append(path + "/" + filename)
     return res
 #search(dirs, "file3")
 # ПЕРЕВІРКА
