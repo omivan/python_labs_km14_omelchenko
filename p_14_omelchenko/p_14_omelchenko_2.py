@@ -1,5 +1,5 @@
 import json
-with open('p_14_omelchenko\\image_info_test-dev2017.json') as f:
+with open('image_info_test-dev2017.json') as f:
     data = json.load(f)
 
 print("1) " + str(len(data["images"])))
