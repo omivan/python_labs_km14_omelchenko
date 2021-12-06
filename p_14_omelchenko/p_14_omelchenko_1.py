@@ -4,7 +4,7 @@ import csv
 
 fieldnames = ['song', 'year']
 
-with open('p_14_omelchenko\\beatles', 'w') as file_path:
+with open('beatles', 'w') as file_path:
     writer = csv.DictWriter(file_path, fieldnames =  fieldnames)
     writer.writerow({   
                         'song': "Hard day's night",
@@ -26,7 +26,7 @@ with open('p_14_omelchenko\\beatles', 'w') as file_path:
                         'song': "I Want You (She’s So Heavy)",
                         'year': 1969,
                     })
-with open('p_14_omelchenko\\beatles', 'r') as file_path:
+with open('beatles', 'r') as file_path:
     reader = csv.DictReader(file_path, fieldnames =  fieldnames)
     for heading in reader.fieldnames:
             print(heading, end=' ')
