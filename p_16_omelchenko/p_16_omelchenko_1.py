@@ -60,3 +60,4 @@ def create_book_blocks(page_number):
 
 page_number = check_input("Input number of pages: ")
 print(create_book_blocks(page_number))
+print("Number of blocks: ", int(page_number/16))
